@@ -1,0 +1,11 @@
+<h3>Student List <button class="btn btn-warning" [routerLink]="['/ladd-student']">Add</button></h3><br>
+<hr>
+<div class="row" *ngFor="let student of data">
+    <div class="col">
+        <p>{{student.first_name}} {{student.last_name}} {{student.student_id}} </p>
+        <hr>
+    </div>
+    <div class="col">
+        <button class="btn btn-primary" [routerLink]="['/student', student.student_id]">Open</button>
+    </div>
+</div>

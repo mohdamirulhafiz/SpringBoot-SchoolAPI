@@ -1,0 +1,20 @@
+
+<h3>{{student.first_name}} {{student.last_name}} <button class="btn btn-warning" style="border-radius: 50px;" [routerLink]="['/update-user', student.student_id]">Edit</button></h3><br>
+<p>Email: {{student.email}}</p>
+<p>Contacts: <button class="btn btn-warning" [routerLink]="['/users/add-contact', student.student_id]">Add</button></p>
+<hr>
+<div class="row">
+    <div class="col">
+        <ul>
+            <li>Student ID: {{student.student_id}}</li>
+            <li>First Name: {{student.first_name}}</li>
+            <li>Last Name: {{student.last_name}}</li>
+            <li>Email: {{student.email}}</li>
+        </ul>
+        <hr>
+    </div>
+    <div class="col">
+        <button class="btn btn-primary mb-2" [routerLink]="['/student/update-student', student.student_id]">Edit</button><br>
+       <!-- <button class="btn btn-danger" (click)="delete._id)" >Delete</button> -->
+    </div>
+</div>
